@@ -1,0 +1,48 @@
+/*Sus hijos se distribuyen horizontalmente debido a Flexbox*/
+body{
+    display: flex; /*Convierte el contenedor en un contenedor flex, lo que permite que sus hijos se dispongan horizontalmente en línea (por defecto).*/
+    justify-content: space-between; /*Distribuye los elementos hijos de este contenedor horizontalmente con el mayor espacio posible entre ellos.*/
+    max-width: 90%; /*Restringe el ancho máximo del contenedor al 90% del ancho de la pantalla*/
+    margin: 20px auto; /*Aplica un margen superior e inferior de 20px y centra horizontalmente el contenedor (auto en los márgenes laterales).*/
+    padding: 10px;/*Añade un espacio interno*/
+    gap: 20px;/*Espacio de 20px entre los elementos hijos*/
+    background-color: rgb(209, 203, 203);
+}
+
+/*Organiza elementos con espacio entre ellos, centrado y con un ancho máximo del 90% de la pantalla*/
+.container {
+    flex: 2;/*Permite que el contenedor ocupe más espacio proporcionalmente dentro de un contenedor flex padre*/
+    
+}
+
+/*Estructura de dos columnas flexibles: imagen - contenido*/
+.articulo {
+    display: flex;/*Permite que su contenido (como la imagen y el texto) se organice en una fila horizontal*/
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: auto;/*La imagen ocupe el 100% del ancho disponible dentro de su contenedor*/
+    max-width: 70%;
+    background-color: rgb(185, 204, 202);
+}
+
+.articulo-contenido {
+    flex: 2;/*Hace que esta sección ocupe dos veces más espacio que otro elemento hermano en el mismo contenedor flex*/
+    padding: 15px;
+}
+
+.articulo-contenido h2 {
+    font-size: 18px;
+}
+
+.subtitulo {
+    font-size: 12px;
+}
+
+.articulo-imagen img {
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
